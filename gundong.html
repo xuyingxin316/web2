@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8">
+<title>循环滚动信息栏</title> 
+<style type="text/css"> 
+#express li{ 
+color: #ff944e;
+font-weight: bolder;
+height:25px; 
+line-height:20px; 
+font-size:12px; 
+list-style:none; 
+} 
+#dome{ 
+height:323px; 
+overflow:hidden; 
+margin-top:0px; 
+} 
+#book_class{ 
+width:204px; 
+height:323px; 
+border:1px solid;
+border-bottom-color: #ebeae7;
+border-right-color: #fff;
+border-left-color: #fff;
+border-top-color: #fff; 
+margin-left:auto; 
+margin-right:auto; 
+margin-top:70px; 
+} 
+#express{ 
+margin-left:-30px; 
+margin-right:10px; 
+margin-bottom:0px; 
+margin-top:0px; 
+} 
+/*#book_class div div  li a{ 
+text-decoration:none; 
+color:#333333; 
+} */
+</style> 
+</head> 
+<body> 
+<div id="book_class"> 
+<div id="dome"> 
+<div id="dome1"> 
+<ul id="express"> 
+					<li>[公告]&nbsp;&nbsp;帮购及VIP服务调整1</li>
+					<li>[公告]&nbsp;&nbsp;帮购及VIP服务调整2</li>
+					<li>[公告]&nbsp;&nbsp;帮购及VIP服务调整3</li>
+					<li>[公告]&nbsp;&nbsp;帮购及VIP服务调整4</li>
+					<li>[公告]&nbsp;&nbsp;帮购及VIP服务调整5</li>
+					<li>[公告]&nbsp;&nbsp;帮购及VIP服务调整6</li>
+					<li>[公告]&nbsp;&nbsp;帮购及VIP服务调整7</li>
+					<li>[公告]&nbsp;&nbsp;帮购及VIP服务调整8</li>
+					<li>[公告]&nbsp;&nbsp;帮购及VIP服务调整9</li>
+					<li>[公告]&nbsp;&nbsp;帮购及VIP服务调整10</li>
+					<li>[公告]&nbsp;&nbsp;帮购及VIP服务调整11</li>
+					<li>[公告]&nbsp;&nbsp;帮购及VIP服务调整12</li>
+					<li>[公告]&nbsp;&nbsp;帮购及VIP服务调整13</li>
+ 
+</div> 
+<div id="dome2"></div> 
+</div> 
+</div> 
+<!----------防止html没有加载完，把javascript代码写在下面----------> 
+<script type="text/javascript"> 
+var dome=document.getElementById("dome"); 
+var dome1=document.getElementById("dome1"); 
+var dome2=document.getElementById("dome2"); 
+var speed=50;//设置向上轮动的速度 
+dome2.innerHTML=dome1.innerHTML;//复制节点 
+function moveTop(){ 
+if(dome1.offsetHeight-dome.scrollTop<=0){ 
+dome.scrollTop=0; 
+}else{ 
+dome.scrollTop++; 
+} 
+} 
+var myFunction=setInterval("moveTop()",speed); 
+dome.onmouseover=function(){ 
+clearInterval(myFunction); 
+} 
+dome.onmouseout=function(){ 
+myFunction=setInterval(moveTop,speed); 
+} 
+</script> 
+</body> 
+</html> 
