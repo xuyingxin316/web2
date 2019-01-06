@@ -193,42 +193,12 @@
 			oNavlist[index-1].className = 'active';
 		}
 	}
-	// var area =document.getElementById('e2');
- //        var con1 = document.getElementById('e2a');
- //        var con2 = document.getElementById('e2b');
- //        var conn = con1.innerHTML;
- //        con2.innerHTML=conn;
- //        function scrollUp(){
- //            if(area.scrollTop>=con1.offsetHeight){
- //                area.scrollTop=0;
- //            }else{
- //                area.scrollTop++;
- //            }
- //        }                
- //        var time = 50;
- //        var mytimer=setInterval(scrollUp,time);
- //        area.onmouseover=function(){
- //            clearInterval(mytimer);
- //        }
- //        area.onmouseout=function(){
- //            mytimer=setInterval(scrollUp,time);
- //        }
- //        window.onload = function(){
- //        	var cover = document.getElementByClassName('cover')[0];
- //        	window.onscroll = function(){
- //        		var st = document.documentElement.scrollTop||document.body.scrollTop;
- //        		if(st>180){
- //        			cover.style.position = 'fixed'
- //        		}else{
- //        			cover.style.position = 'static'
- //        		}
- //        	}
- //        }
- animate(e2a,{top:-100px});
+	
+ // animate(e2a,{top:-100px});
 </script>
 <!-- 轮播图 -->
 
-		<div id="six1">
+		<div id="six1">                                                 
 			<div id="six2"><img src="img/1(1).jpg"></div>
 			<div id="six2"><img src="img/2.jpg"></div>
 			<div id="six2"><img src="img/3(1).png"></div>
@@ -241,7 +211,7 @@
 				<div id="jiantou"><img src="img/jiantou.jpg"></div>
 			</div>
 			<div id="e2">
-					<ul id="e2a" >
+					<ul class="ef1">
 					   	<li>[公告] 帮购及VIP服务调整1</li>
                         <li>[公告] 帮购及VIP服务调整2</li>
                         <li>[公告] 帮购及VIP服务调整3</li>
@@ -256,7 +226,7 @@
                         <li>[公告] 帮购及VIP服务调整12</li>
                         <li>[公告] 帮购及VIP服务调整13</li>
                     </ul>
-                    <ul id="e2b"></ul>
+                    
 			</div>
 		<div id="eight">
 			<img src="img/phone.png">&nbsp;<span id="eight2">话费充值</span> <span id="eight1">(可使用超级帮钻)</span>
@@ -384,6 +354,30 @@
 	     <div id="ewm2"><img src="img/erwei.png"></div>
 	  </div>
 	  <script type="text/javascript">
+	  	var area =document.getElementById('e2');
+	  	var con1 = document.querySelector(".ef1");
+        con1.innerHTML += con1.innerHTML;
+        function scrollUp(){
+            if(area.scrollTop>=con1.offsetHeight){
+                area.scrollTop=0;
+            }else{
+                area.scrollTop++;
+            }
+        }                
+        var time = 50;
+        var mytimer=setInterval(scrollUp,time);
+ 
+        // window.onload = function(){
+        // 	var cover = document.getElementByClassName('cover')[0];
+        // 	window.onscroll = function(){
+        // 		var st = document.documentElement.scrollTop||document.body.scrollTop;
+        // 		if(st>180){
+        // 			cover.style.position = 'fixed'
+        // 		}else{
+        // 			cover.style.position = 'static'
+        // 		}
+        // 	}
+        // }	
 	  function openNav1() {
 		    document.getElementById("mySidenav1").style.width = "123px";
 		}

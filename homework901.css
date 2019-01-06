@@ -5,7 +5,6 @@
 #total{
 	width: 1350px;
 	height: 1060px;
-	border:4px solid red;
 	margin:100px auto;
 	background-color: #f8f7f6;
 }
@@ -356,10 +355,12 @@ ul,li{
 	border-bottom:1px solid #ebeae7;
 	overflow:hidden;
 }
-#e2 #e2a,#e2b{
-	width:170px;
+.ef1 {
+	width: 200px;
+	height: 320px;
 	padding-left:16px;
 }
+
 #e2 li{
 	height:15px;
 	line-height:15px;
